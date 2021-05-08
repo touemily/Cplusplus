@@ -1,7 +1,3 @@
-/*
- Student Name: Emily Tou
-*/
-
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
