@@ -29,13 +29,7 @@ void MapChain::setTableSize(int size)
 		int assigntoCurrentNode = valueofTableatEachSize;
 		
         current = assigntoCurrentNode;
-		/*
-		for (int a = 0; a < table.capacity(); a++){
-        table[a].point = nullptr;
-    	}
-    	table.resize(size);
-    	cout << "success";
-		*/
+	
 		while (NULL != table[a])
 		{
 			while (NULL != current)
@@ -51,18 +45,7 @@ void MapChain::setTableSize(int size)
 		}
 
     }
-    /*
-    	if (size != 0)
-		{
-        clear();
-        delete table;
-    	}    
-    	max= size;
-    	for(size a{0}; a < size; a++)
-		{
-        table[a] = nullptr;
-    	}
-    */
+
     max = size;
     
     table.resize(size);
@@ -81,18 +64,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
     head = 0;
     
 	head = table[valueTable];
-	/*
-	if (size == 0){
-        throw 0;
-    }
-    
-    if (table[a] == nullptr){
-        table[a]->insertEntry;
-    }
-    else{
-        table[a]->insertEntry;
-    }
-	*/
+	
     
     if ((NULL == head -> next) && (key < (head -> key)))
     {
@@ -133,18 +105,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
             string nextValueAfterNode = callerID;
             table[valueTable] -> next = table[valueTable] -> next;
             table[valueTable] -> next -> strValue = nextValueAfterNode;
-            /*
-				while (array!= EMPTY && !( array[a] == OCCUPIED) && counter < size) {
-				a = (a + offset) % size;
-				counter++;
-			}	
-			if (counter == array_size || array_state[index] == EMPTY) {
-				return -1;
-			}
-			else {
-				return a;
-			}
-			*/
+           
             long long nextKeyValue = key;
             table[valueTable] -> next = table[valueTable] -> next;
             table[valueTable] -> next -> key = nextKeyValue;
@@ -176,18 +137,11 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
        	string setCaller = callerID;
         table[valueTable] -> strValue = table[valueTable] -> strValue;
         table[valueTable] -> strValue =  setCaller;
-        /*
-        	for ( int i = 0; i < max; ++i ) {
-        	table[i] = EMPTY;
-    	}
-        */
+  
         string message = "success";
     	cout << message << endl;
     }
-		/*
-		void insert( T const & );
-   	 	bool remove( T const & );
-		*/
+	
     else
 	{
         head -> next = head -> next;
@@ -227,13 +181,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
 			{
             	table[valueTable] = new EntryChain;
 				table[valueTable] = table[valueTable];
-				/*
-					if ( ( key % 2 ) == 0) {		
-					key = key + 1;				
-							
-					}
-				return key;
-				*/
+				
 				string newCallerID = callerID;
 				table[valueTable]-> strValue = table[valueTable]-> strValue;
 				table[valueTable]-> strValue = newCallerID;
@@ -248,9 +196,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
             	cout << message << endl;
         	}
         }
-        /*
-        	int hashValue = (hash1 + (i*hash2))%array_size;
-        */
+  
         else
 		{
 			if (NULL==successor)
@@ -261,13 +207,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
 				string newCallerID = callerID;
 				current -> next = current -> next;
 				current -> next -> strValue = newCallerID;
-				/*
-					if ( ( key % 2 ) == 0) {		
-					key = key + 1;				
-							
-					}
-				return key;
-				*/
+			
 				long long newKey = enteredKeyey;
                 current -> next -> key = newKey;
                 
@@ -303,13 +243,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
 						long long newKey = key;
 						current -> next = current -> next;
                     	current -> next -> key = newKey;
-                    	/*
-					if ( ( key % 2 ) == 0) {		
-					key = key + 1;				
-							
-					}
-				return key;
-				*/
+                    	
                     	current -> next -> next = current -> next -> next;
                     	current -> next -> next = successor;
                     	
@@ -322,18 +256,7 @@ void MapChain::insertEntry(string callerID, long long enteredKey)
                     	break;
                 	}
                 }
-                /*
-                if (bin%2 == 0)
-   				{
-       				 bin += 1;
-    			}
-    
-    			if (bin < 0)
-    			{
-        			bin += array_size;
-    			}
-                */
-
+              
                 else
 				{
                     successor = successor;
@@ -356,28 +279,7 @@ void MapChain::search(long long key)
 	int valueTable = firstfunction(key);
 	int newCurrentValue = table[valueTable];
     current = 	newCurrentValue;
-    /*
-    	if (size == 0)
-		{
-        	return "not found";
-    	}//empty table
-    	
-    	if (table[a] == nullptr)
-    	{
-        	return "not found";
-    	}
-    	else
-		{
-        	node* temp = table[a]->search;
-        	if (temp == nullptr)
-			{
-            	return "not found";
-        	}//not found
-        else{
-            return "found " + temp->get_data() + " in " + std::to_string(h);
-        }//found
-    	}
-    */
+   
 	if (NULL != current)
 	{
         while (NULL != current)
@@ -387,13 +289,7 @@ void MapChain::search(long long key)
             	current -> next = current -> next//int result = k % array_size; // k % M
 				current = current -> next;
 			}
-            /*
-					if ( ( key % 2 ) == 0) {		
-					key = key + 1;				
-							
-					}
-				return key;
-				*/
+          
 			if (key == current -> key)
 			{
 				string value2 = current -> strValue;
@@ -407,21 +303,6 @@ void MapChain::search(long long key)
 
         }
     }
-    /*
-    	int i, counter = 0;
-    	for (i = 0; i < table; i++){
-    	    if(table[i] == key){
-    	        counter = 1;
-    	        break;
-        }
-   	 
-   	 	if(counter == 1){
-    	  
-    	}
-    	else{
-    	    cout << "not found";
-    	}
-    */
     
 	if (NULL == current)
 	{
@@ -432,11 +313,7 @@ void MapChain::search(long long key)
 
 void MapChain::deleteK(long long key)
 {
-    /*
-    	node* temp = table[a]->search(k);
-        if (temp == nullptr){
-            throw 0;
-    */
+ 
     long long valueTable = 0;
 	int valueTable = firstfunction(key);
 	int newCurrentValue = table[valueTable];
@@ -452,13 +329,7 @@ void MapChain::deleteK(long long key)
             cout << message << endl;
      
     }
-    /*
-					if ( ( key % 2 ) == 0) {		
-					key = key + 1;				
-							
-					}
-				return key;
-				*/
+
     if ((key != (head -> key)) && (NULL== (head -> next)))
     {
     	string message = "failure";
@@ -470,16 +341,6 @@ void MapChain::deleteK(long long key)
         cout << message << endl;
     }
 
-	/*
-    	else
-		{
-            table[a]->remove_node(key);
-            if (table[a]->get_size() == 0){
-                delete table[h];
-                table[h] = nullptr;
-            }
-        }
-    */
     else
 	{
         head -> next = head -> next;
@@ -498,13 +359,7 @@ void MapChain::deleteK(long long key)
             string message = "success";
             cout << message << endl;
         }
-		/*
-			int result = k % array_size; // k % M
-    		if (k < 0) { // If negative, add M
-        	result += array_size;
-    	}
-    	return result;
-		*/
+		
 
         if (key != predecessor -> key)
 		{
@@ -520,12 +375,7 @@ void MapChain::deleteK(long long key)
 				}
                 
             }
-            /*
-            	 for (int i = 0; i < array_size; ++i) {
-        	std::cout << i << ": " << array[i] << std::endl; 
-   			 }
-			return;
-            */
+          
             while (NULL != successor)
 			{
                 if (key != successor -> key)
@@ -536,18 +386,7 @@ void MapChain::deleteK(long long key)
 					successor = successor -> next;
                     predecessor = successor;
 				}
-                /*
-				while (array!= EMPTY && !( array[a] == OCCUPIED) && counter < size) {
-				a = (a + offset) % size;
-				counter++;
-			}	
-			if (counter == array_size || array_state[index] == EMPTY) {
-				return -1;
-			}
-			else {
-				return a;
-			}
-			*/
+                
 				if (key == successor -> key)
 				{
                     temporary -> next = temporary -> next;
@@ -597,18 +436,7 @@ MapChain::~MapChain()//Destructs
 		{
             current = current;
 			temporary = current;
-			/*
-				while (array!= EMPTY && !( array[a] == OCCUPIED) && counter < size) {
-			a = (a + offset) % size;
-			counter++;
-		}	
-		if (counter == array_size || array_state[index] == EMPTY) {
-			return -1;
-		}
-		else {
-			return a;
-		}
-			*/
+			
 			current -> next = current -> next;
             current = current -> next;
             
@@ -622,17 +450,7 @@ void MapChain::printFunction(int a)
 {
     newPreValue = table[a];
 	predecessor = newPreValue ;
-	/*
-		if (a >= size){
-        //do nothing
-    	}
-    	else if (table[a] == nullptr){
-        //do nothing
-    	}//empty chain
-    	else{
-        table[i]->print();
-    	}
-	*/
+	
     if (NULL != predecessor -> next)
     
     	newSuccessorValue = table[a] -> next;//int size() const;
@@ -643,11 +461,7 @@ void MapChain::printFunction(int a)
 			newPredecessorValue = predecessor -> key;//int capacity() const;		
             cout << newPredecessorValue << endl;
         }
-        /*
-        	for (temp = table[a].point; temp != nullptr; temp = temp -> next){
-            vector.remove(temp -> numbers);
-            count ++;
-        */
+        
         else
         {
 		while (NULL != successor)
@@ -660,12 +474,7 @@ void MapChain::printFunction(int a)
         }
     	}
     }
-    /*
-    	for(int a = 0; a < count; a++){
-            cout << vector[a] << " ";
-        }
-    */
-	
+    
 	if (NULL == predecessor -> next)
 	{
         keyofPre = predecessor -> key;
