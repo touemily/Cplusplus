@@ -17,14 +17,14 @@ public:
 private:
 	
 	long long key; //Key variable to be entered
-	//primaryHash(const long long& phoneNumber) const
+	
 	EntryChain* next; //Pointers of this class
 	EntryChain* predecessor;
 	EntryChain* successor;
 	EntryChain* head;
 	EntryChain* current;
 	EntryChain* temporary;
-	//secondaryHash(const long long& phoneNumber) const
+
     string striValue; //String
     
 };
