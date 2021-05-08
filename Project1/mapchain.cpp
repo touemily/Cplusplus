@@ -1,10 +1,3 @@
-/**
-    ECE250
-    mapchain.cpp
-
-    Author: Emily Tou
-    Version 1.0  - 09/10/2020
-*/
 
 #include <cmath>
 #include <iostream>
