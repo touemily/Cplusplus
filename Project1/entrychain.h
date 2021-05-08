@@ -1,10 +1,3 @@
-/**
-    ECE250
-    entrychain.h
-
-    Author: Emily Tou
-    Version 1.0  - 09/10/2020
-*/
 
 #ifndef ENTRYCHAIN_H
 #define ENTRYCHAIN_H
