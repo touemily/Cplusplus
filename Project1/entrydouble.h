@@ -1,10 +1,3 @@
-/**
-    ECE250
-    entrydouble.h
-
-    Author: Emily Tou
-    Version 1.0  - 09/10/2020
-*/
 
 #ifndef ENTRYDOUBLE_H
 #define ENTRYDOUBLE_H
