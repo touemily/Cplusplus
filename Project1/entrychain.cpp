@@ -1,10 +1,3 @@
-/**
-    ECE250
-    entrychain.cpp
-
-    Author: Emily Tou
-    Version 1.0  - 09/10/2020
-*/
 #include "entrychain.h"
 
 #include <string>
